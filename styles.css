@@ -1,0 +1,21 @@
+#main-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.column{
+    border: 1px solid lightgray;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+
+.trail{
+    background-color: black;
+}
