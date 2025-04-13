@@ -1,6 +1,7 @@
 const mainContainer = document.getElementById("main-container");
 
 function makeGrid(rows, columns) {
+    mainContainer.innerHTML = ""
     for (let i =0; i < rows; i++) {
         const rowDiv = document.createElement("div");
         rowDiv.className = "row";
@@ -11,7 +12,6 @@ function makeGrid(rows, columns) {
             columnDiv.addEventListener("mouseover", () =>{
                 columnDiv.classList.add("trail");
             });
-
             rowDiv.appendChild(columnDiv);
         }
     }
@@ -29,10 +29,9 @@ startButton.addEventListener("click", () =>{
    //ask for number of rows and columns
     const  numberOfGrids= prompt("How many rows and columns should the new grid have?")
     if (numberOfGrids > 100){
-        mainContainer.innerHTML = ""
+
         makeGrid(16, 16);
     }else{
-        mainContainer.innerHTML = ""
         makeGrid(numberOfGrids, numberOfGrids);
     }
 
