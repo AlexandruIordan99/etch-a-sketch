@@ -28,8 +28,14 @@ startButton.textContent = "Open a new Container";
 startButton.addEventListener("click", () =>{
    //ask for number of rows and columns
     const  numberOfGrids= prompt("How many rows and columns should the new grid have?")
-    mainContainer.innerHTML = ""
-    makeGrid(numberOfGrids, numberOfGrids);
+    if (numberOfGrids > 100){
+        mainContainer.innerHTML = ""
+        makeGrid(16, 16);
+    }else{
+        mainContainer.innerHTML = ""
+        makeGrid(numberOfGrids, numberOfGrids);
+    }
+
 })
 
 header.appendChild(startButton);
